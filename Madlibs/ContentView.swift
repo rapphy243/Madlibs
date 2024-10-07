@@ -13,6 +13,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Text("Please enter requested words below")
+                    .padding()
                 HStack {
                     CustomTextFields(placeholder: "Color", variable: $word.color)
                     CustomTextFields(placeholder: "Noun", variable: $word.noun0)
@@ -34,10 +35,11 @@ struct ContentView: View {
                     CustomTextFields(placeholder: "Adjective", variable: $word.adjective4)
                 }
                 NavigationLink("Next", destination: storyView(word: word))
+                    .padding()
+                Spacer()
             }
             .navigationTitle("Initial View")
         }
-        Spacer()
     }
 }
 
@@ -52,7 +54,7 @@ struct words {
     
     var noun0 = ""
     var noun1 = ""
-    var noun2 = ""
+
     
     var verb0 = ""
     var verb1 = ""
